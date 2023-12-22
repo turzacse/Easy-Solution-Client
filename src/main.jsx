@@ -17,6 +17,7 @@ import Profile from './components/Dashboard/Profile';
 import CreateTask from './components/Dashboard/CreateTask';
 import TodoList from './components/Dashboard/TodoList';
 import Feedback from './components/Feedbackpage/Feedback';
+import About from './components/AboutPage/About';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/feedback',
         element: <Feedback/>
+      },
+      {
+        path: '/about',
+        element: <About/>
       },
       {
         path:"/login",

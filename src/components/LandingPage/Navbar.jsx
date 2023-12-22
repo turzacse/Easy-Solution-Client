@@ -27,6 +27,9 @@ const Navbar = () => {
         <li  ><NavLink to="/feedback" style={({ isActive }) => ({
             color: isActive ? 'beige' : ''
         })} >Feedback</NavLink></li>
+        <li  ><NavLink to="/about" style={({ isActive }) => ({
+            color: isActive ? 'beige' : ''
+        })} >About</NavLink></li>
 
         {user && (
             <>
