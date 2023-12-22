@@ -251,7 +251,7 @@ const TodoList = () => {
             </div>
 
             <div>
-            <h1 className="text-3xl font-bold text-center bg-orange-500 p-4">On-Going List</h1>
+            <h1 className="text-3xl font-bold text-center bg--500 p-4">On-Going List</h1>
                 {
                     goings.map((todo) => (
                         <div className="bg-base-200" key={todo._id}>
@@ -259,7 +259,7 @@ const TodoList = () => {
                             {/* <p>{todo.description}</p> */}
                             <p>{todo.deadline}</p>
                             <h2>{todo.priority}</h2>
-                            <button className="btn glass text-2xl text-red-400" onClick={() => handleDeleteFromTodo(todo._id)}><MdDelete/></button>
+                            <button className="btn glass text-2xl text-red-400" onClick={() => handleDeleteFromOngoing(todo._id)}><MdDelete/></button>
                             <button className="btn glass" onClick={() => handleMoveToTodo(todo)}>To-Do</button>
                             <button className="btn glass text-2xl text-green-400" onClick={() => handleMoveToCompeleted(todo)}><IoIosCloudDone/></button>
                         </div>
