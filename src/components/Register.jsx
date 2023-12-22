@@ -1,5 +1,3 @@
-import Footer from "./LandingPage/Footer";
-import Navbar from "./LandingPage/Navbar";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvide/AuthProvider";
@@ -26,40 +24,35 @@ const Register = () => {
             return (
                 Swal.fire({
                     title: 'Error!',
-                    text: 'Password must be at least 6 characters long, contain a capital letter and a special character.',
+                    text: 'Provide length 6. And also a Capital & special Char.',
                     icon: 'error',
-                    confirmButtonText: 'OK Buddy Cool! Let me Fix it!'
+                    confirmButtonText: 'Fix It'
                   })
             )
         }
-
         createUser(email,password)
         .then(result => {
             console.log(result.user)
             navigate(locationState? locationState : '/')
             Swal.fire(
-                'Good job!',
-                'Allah tumi sign up kore felso!',
-                'success'
+                'Tumake To-Do Application a Sagotom'
               )
         })
         .catch(error => {
             console.error(error); 
-        
         })
     }
-
     return (
         <div>
-            <Navbar></Navbar>
             <div className="hero bg-base-200">
-                <div className="hero-content  py-16 flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Register to Explore!</h1>
-                        <p className="py-6">Sign up now and unlock the power of streamlined task management with our user-friendly registration process.</p>
+                <div className="my-20">
+                    <div>
+                        
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleRegister} className="card-body">
+                    <div className="card md:w-full md:max-w-screen-sm shadow-2xl bg-base-100">
+                    <h2 className="pt-10 text-2xl text-center font-semibold text-orange-500">Easy Solution</h2>
+                        <form onSubmit={handleRegister} className="md:p-10 p-4">
+                        {/* <h2 className="pt-10 text-2xl text-center font-semibold text-orange-500">Easy Solution</h2> */}
                         <div className="form-control">
                             <label className="label">
                             <span className="label-text">Email</span>
@@ -76,14 +69,13 @@ const Register = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn glass">Register</button>
+                            <button className="btn bg-green-500 text-2xl text-white font-semibold">Register</button>
                             <p className="py-6">Already have a account? Proceed to <Link className="text-gray-900 font-bold" to='/login' >Login</Link></p>
                         </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>  
     );
 };

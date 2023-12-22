@@ -1,10 +1,9 @@
-import Footer from "./LandingPage/Footer";
-import Navbar from "./LandingPage/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvide/AuthProvider";
 import { useLocation } from "react-router-dom";
 import Swal from 'sweetalert2'
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     const { signIn, createUserGoogle, locationState, setLocationState } = useContext(AuthContext);
@@ -59,15 +58,11 @@ const Login = () => {
     }
     return (
         <div>
-            <Navbar></Navbar>
             <div className="hero mt-8 bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login to know about your tasks!</h1>
-                        <p className="py-6">Welcome back! Access your tasks and productivity tools swiftly by logging in securely to your personalized account.</p>
-                    </div>
+                <div className="my-20">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleLogIn} className="card-body">
+                        <h2 className="pt-10 text-2xl text-center font-semibold text-orange-500">Easy Solution</h2>
+                        <form onSubmit={handleLogIn} className="md:p-10 p-4">
                             <div className="form-control">
                                 <label className="label">
                                 <span className="label-text">Email</span>
@@ -79,21 +74,18 @@ const Login = () => {
                                 <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                                <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn glass">Login</button>
+                                <button className="btn bg-green-600 text-white text-2xl font-semibold p-2">Login</button>
                             </div>
-                            <button onClick={handleLogInWithGoogle} className="btn glass">Login with Google</button>
-                            <p className="py-6">Do not have a account? Proceed to <span className="text-gray-900 font-bold" to='/register' onClick={goToRegister} >Register</span></p>
+                            <h2 className="text-center text-2xl font-semibold text-green-500">Join with us</h2>
+                            <button onClick={handleLogInWithGoogle} className="btn bg-orange-500 text-2xl text-white"><FaGoogle/></button>
+                            <p className="py-6">Do not have a account? Proceed to <span className="text-blue-500 font-semibold" to='/register' onClick={goToRegister} >Register</span></p>
                         </form>
 
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>       
     );
 };
