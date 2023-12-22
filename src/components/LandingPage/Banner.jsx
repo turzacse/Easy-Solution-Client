@@ -10,8 +10,8 @@ const Banner = () => {
                 <h1 className="text-5xl font-bold ">
                 Provide The easy Solution
                 </h1>
-                <p className="py-6 ">Effortlessly Organize Your Tasks! Introducing TaskMan, Your Ultimate Task Management Solution. Seamlessly plan, prioritize, and track your to-dos with our intuitive interface. Collaborate effortlessly, set deadlines, and stay on top of your goals. Boost productivity and efficiency. Join Now for a streamlined task management experience!</p>
-                <Link to="/dashboard"><button className="btn glass">Explore!</button></Link>
+                <p className="py-6 ">Easy Solution" is a straightforward and user-friendly to-do list application designed to streamline task management. This application simplifies organizing tasks, enabling users to create, track, and manage their daily activities efficiently. With a clean and intuitive interface, Easy Solution offers a user-friendly experience, allowing individuals to easily add, edit, prioritize, and mark tasks as completed.</p>
+                <Link to="/dashboard"><button className="btn bg-warning">Explore More!</button></Link>
                 </div>
             </div>
         </div>
